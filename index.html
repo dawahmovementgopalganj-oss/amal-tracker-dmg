@@ -736,8 +736,8 @@ const SITE_CONFIG = {
 };
 const API_CONFIG = {
   webAppUrl: "https://script.google.com/macros/s/AKfycbx-pjCYOjKKrb5k7KKXgO0jbLY066Vj8OOZWzO7KUDt3qknkYmxVWUiWWwdr_kRYynh/exec",                           // << Apps Script Web App URL এখানে বসান (…/exec)
-  timeoutMs: 30000,
-  statusRetries: 3
+  timeoutMs: 120000,
+  statusRetries: 20
 };
 const UI_CONFIG = { lockCards: true };     // true = আগের কার্ড সম্পূর্ণ না হলে পরেরটি লক
 const O_DONE=["আলহামদুলিল্লাহ, আদায় করেছি","আফোয়ান, একেবারেই আদায় করা হয়নি"];
@@ -985,7 +985,7 @@ function recover(n){
   return api("GET","action=status&requestId="+encodeURIComponent(rid),null,15000).then(function(r){
     if(r&&r.ok&&r.status==="success")return done(r);
     if(r&&r.ok&&r.status==="unknown"&&n>=API_CONFIG.statusRetries)return fail("আপনার তথ্য সংরক্ষিত হয়েছে বলে নিশ্চিত হওয়া যায়নি। আবার চেষ্টা করুন—একই অনুরোধ দুবার জমা হবে না।");
-    if(r&&r.ok&&r.status==="unknown")return new Promise(function(res){setTimeout(res,1500)}).then(function(){return recover(n+1)});
+    if(r&&r.ok&&r.status==="unknown")return new Promise(function(res){setTimeout(res,3000)}).then(function(){return recover(n+1)});
     return fail("আপনার তথ্য সংরক্ষিত হয়েছে বলে নিশ্চিত হওয়া যায়নি। আবার চেষ্টা করুন।");
   },function(){
     if(n<API_CONFIG.statusRetries)return new Promise(function(res){setTimeout(res,2000)}).then(function(){return recover(n+1)});
