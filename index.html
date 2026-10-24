@@ -458,6 +458,12 @@ select.input{
   font-weight:700;font-size:.9rem;margin-top:2px
 }
 .support-cta{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+.btn-wa:hover{background:#166534}
+.btn-outline-wa{background:#fff;color:var(--wa);border-color:var(--wa)}
+.btn-outline-wa:hover{background:#f0fdf4}
+.btn .wa-ic{width:1.35em;height:1.35em;flex:none;fill:currentColor}
+.support-desc{margin:0}
+.u-input{min-height:52px;resize:none;overflow:hidden}
 .site-footer{background:var(--emerald-900);color:#B3E5FC;padding:36px 0 28px}
 .site-footer h3{color:#fff;font-size:1.2rem}
 .site-footer p{color:#B3E5FC}
@@ -685,15 +691,38 @@ body.no-scroll{overflow:hidden}
   <div class="container narrow">
     <div class="section-head"><h2>গাইডলাইন</h2></div>
     <div class="card"><ol class="support-steps">
-      <li>ফর্ম প্রতিদিন ঢাকা সময় সন্ধ্যা ৬টা থেকে রাত ১২টা পর্যন্ত খোলা থাকে।</li>
-      <li>একজন ব্যবহারকারী মোবাইল নম্বর অনুযায়ী একটি ঢাকা ক্যালেন্ডার দিনে একবারই আমলশিট জমা দিতে পারবেন।</li>
-      <li>তারিখ স্বয়ংক্রিয়; সার্ভার ঢাকা সময় অনুযায়ী তারিখ নির্ধারণ করে।</li>
-      <li>দেখানো প্রতিটি প্রশ্নের উত্তর নির্বাচন করে পরবর্তী ধাপে যান। কুরআন, দ্বীনি জ্ঞান ও ইস্তেগফারের লেখার ঘর ঐচ্ছিক।</li>
-      <li>জমা সফল হলে সার্ভার থেকে নিশ্চিতকরণ বার্তা দেখানো হবে; নিশ্চিত না হলে সফলতার দাবি করা হবে না।</li>
-    </ol></div>
+            <li>প্রতিদিন নির্ধারিত সময়ে আমলশিট পূরণ করুন। নির্ধারিত সময়ের বাইরে জমা দেওয়া যাবে না।</li>
+      <li>ধাপে ধাপে প্রাথমিক তথ্য, পাঁচ ওয়াক্ত সালাত ও অন্যান্য আমল পূরণ করুন।</li>
+      <li>প্রতিটি প্রশ্নের উত্তর দিন। কোনো ঘর খালি রাখবেন না।</li>
+      <li>কোনো আমল ছুটে গেলে বা কারণ লেখার ঘর এলে সঠিক কারণ সংক্ষেপে লিখুন।</li>
+      <li>নিজের সঠিক আইডি নম্বর দিন। ভুল নম্বর দেবেন না।</li>
+      <li>প্রতিদিন একই মোবাইল নম্বর ব্যবহার করুন।</li>
+      <li>সব তথ্য যাচাই করে ‘জমা দিন’ বাটনে ক্লিক করুন।</li>
+      <li>সফলতার বার্তা দেখলে বুঝবেন আপনার আমলশিট জমা হয়েছে। জমা না হলে দায়িত্বশীলের সঙ্গে যোগাযোগ করুন।</li></div>
   </div>
 </section>
 <!-- WEEKLY AMAL TRACKER END -->
+<!-- SUPPORT SECTION START -->
+<section class="section" id="support">
+  <div class="container narrow">
+    <div class="section-head"><h2>সহায়তা প্রয়োজন?</h2></div>
+    <div class="card">
+      <p class="support-desc">আমলশিট পূরণ করতে কোনো সমস্যা হলে, ফর্ম জমা না হলে অথবা কোনো পরামর্শ ও মন্তব্য থাকলে আমাদের সঙ্গে যোগাযোগ করুন।</p>
+      <div class="support-cta">
+        <a class="btn btn-wa btn-lg btn-block" id="supportWa" href="#" target="_blank" rel="noopener noreferrer"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp-এ সহায়তা</a>
+        <a class="btn btn-outline-wa btn-lg btn-block" id="supportCall" href="#">কল করুন</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+/* সহায়তা কনফিগারেশন: নম্বর বা বার্তা বদলাতে শুধু এই দুটি লাইন পরিবর্তন করুন */
+var SUPPORT_CONFIG={phone:"+8801747529614",waMessage:"আসসালামু আলাইকুম। আমার আমলশিট সংক্রান্ত একটি সমস্যায় সহায়তা প্রয়োজন।"};
+(function(){var d=SUPPORT_CONFIG.phone.replace(/\D/g,"");
+document.getElementById("supportWa").href="https://wa.me/"+d+"?text="+encodeURIComponent(SUPPORT_CONFIG.waMessage);
+document.getElementById("supportCall").href="tel:+"+d;})();
+</script>
+<!-- SUPPORT SECTION END -->
 </main>
 
 <!-- FOOTER SECTION START -->
@@ -760,18 +789,15 @@ const PRAYERS=[
 const OTHERS=[
  {title:"সালাতে ধীরস্থিরতা",qs:[
   {id:214719995,t:"r",l:"সালাতে তাড়াহুড়ো না করে কি ধীরস্থিরতা বজায় রেখেছি",o:["আলহামদুলিল্লাহ, আমি সন্তুষ্ট","আফোয়ান, তবে আমি আরো ধীরস্থিরতা বজায় রাখার চেষ্টা করবো ইনশাআল্লাহ"]}]},
- {title:"দেখে দেখে কুরআন তিলওয়াত",qs:[
-  {id:639956102,t:"r",l:"দেখে দেখে কুরআন তিলওয়াত",o:["আলহামদুলিল্লাহ, করেছি।","আফোয়ান, আমল ছুটে গেছে"]},
-  {id:1072799169,t:"r",l:"আলহামদুলিল্লাহ, করেছি",o:O_MIN,s:a=>a[639956102]==="আলহামদুলিল্লাহ, করেছি।"},
-  {id:1095859865,t:"o",l:"আলহামদুলিল্লাহ, করেছি",s:a=>a[639956102]==="আলহামদুলিল্লাহ, করেছি।"}]},
- {title:"দ্বীনি জ্ঞান অর্জনের জন্য সময়",qs:[
-  {id:556257107,t:"r",l:"দ্বীনি জ্ঞান অর্জনের জন্য সময়",o:["আলহামদুলিল্লাহ, দিয়েছি","আফোয়ান, আমল ছুটে গেছে"]},
-  {id:1849090268,t:"r",l:"আলহামদুলিল্লাহ, দিয়েছি",o:O_MIN,s:a=>a[556257107]==="আলহামদুলিল্লাহ, দিয়েছি"},
-  {id:1922738255,t:"o",l:"আলহামদুলিল্লাহ, দিয়েছি",s:a=>a[556257107]==="আলহামদুলিল্লাহ, দিয়েছি"}]},
- {title:"ইস্তেগফার পড়েছি",qs:[
-  {id:780705687,t:"r",l:"ইস্তেগফার পড়েছি",o:["আলহামদুলিল্লাহ, পড়েছি","আফোয়ান, আমল ছুটে গেছে"]},
-  {id:802384520,t:"r",l:"আলহামদুলিল্লাহ, পড়েছি",o:O_CNT,s:a=>a[780705687]==="আলহামদুলিল্লাহ, পড়েছি"},
-  {id:818018182,t:"o",l:"আলহামদুলিল্লাহ, পড়েছি",s:a=>a[780705687]==="আলহামদুলিল্লাহ, পড়েছি"}]},
+  {title:"দেখে দেখে কুরআন তিলওয়াত",qs:[
+  {id:639956102,t:"r",l:"দেখে দেখে কুরআন তিলওয়াত",o:["আলহামদুলিল্লাহ, করেছি।","আফোয়ান, আমল ছুটে গেছে"]},
+  {id:1072799169,u:1095859865,t:"r",l:"আলহামদুলিল্লাহ, করেছি",o:O_MIN,s:a=>a[639956102]==="আলহামদুলিল্লাহ, করেছি।"}]},
+ {title:"দ্বীনি জ্ঞান অর্জনের জন্য সময়",qs:[
+  {id:556257107,t:"r",l:"দ্বীনি জ্ঞান অর্জনের জন্য সময়",o:["আলহামদুলিল্লাহ, দিয়েছি","আফোয়ান, আমল ছুটে গেছে"]},
+  {id:1849090268,u:1922738255,t:"r",l:"আলহামদুলিল্লাহ, দিয়েছি",o:O_MIN,s:a=>a[556257107]==="আলহামদুলিল্লাহ, দিয়েছি"}]},
+ {title:"ইস্তেগফার পড়েছি",qs:[
+  {id:780705687,t:"r",l:"ইস্তেগফার পড়েছি",o:["আলহামদুলিল্লাহ, পড়েছি","আফোয়ান, আমল ছুটে গেছে"]},
+  {id:802384520,u:818018182,t:"r",l:"আলহামদুলিল্লাহ, পড়েছি",o:O_CNT,s:a=>a[780705687]==="আলহামদুলিল্লাহ, পড়েছি"}]},
  {title:"প্রতি ওয়াক্তের সালাতের পূর্বে মিসওয়াক",qs:[
   {id:202779755,t:"r",l:"প্রতি ওয়াক্তের সালাতের পূর্বে মিসওয়াক",o:["আলহামদুলিল্লাহ, করেছি","আফোয়ান, কোন ওয়াক্তেই করতে পারিনি"]},
   {id:119842117,t:"c",l:"আলহামদুলিল্লাহ, করেছি",o:O_WAQT,s:a=>a[202779755]==="আলহামদুলিল্লাহ, করেছি"}]}
@@ -814,7 +840,7 @@ function bnDate(ymd){var p=ymd.split("-");return (p[2]+" "+MON[+p[1]-1]+" "+p[0]
 function qHtml(q){
   var id=q.id;
   if(q.t==="r") return '<fieldset class="field" data-id="'+id+'" hidden><legend class="label">'+esc(q.l)+'<span class="req">*</span></legend><div class="choice-grid">'+
-    q.o.map(function(o){return '<label class="choice"><input type="radio" name="e'+id+'" value="'+esc(o)+'"><span class="choice-body"><span class="dot"></span><span><strong>'+esc(o)+'</strong></span></span></label>'}).join("")+
+    q.o.map(function(o){return '<label class="choice"><input type="radio" name="e'+id+'" value="'+esc(o)+'"><span class="choice-body"><span class="dot"></span><span><strong>'+esc(o)+'</strong></span></span></label>'}).join("")+(q.u?,<textarea class="input u-input" rows="1" maxlength="200" data-u='" placeholder="নিজে লিখুন" aria-label="নিজে লিখুন"></textarea>':'')+
     '</div><p class="field-error"></p></fieldset>';
   if(q.t==="c") return '<fieldset class="field" data-id="'+id+'" hidden><legend class="label">'+esc(q.l)+'<span class="req">*</span></legend><p class="field-hint" style="margin:0 0 8px;color:var(--muted);font-size:.9rem">এক বা একাধিক ওয়াক্ত বেছে নিন।</p><div class="choice-grid">'+
     q.o.map(function(o){return '<label class="choice"><input type="checkbox" name="e'+id+'" value="'+esc(o)+'"><span class="choice-body"><span class="dot sq"></span><span><strong>'+esc(o)+'</strong></span></span></label>'}).join("")+
@@ -834,21 +860,21 @@ function vis(q){return !q.s||q.s(A)}
 function qOk(q){
   if(!vis(q))return true;
   if(q.t==="o")return true;
-  return !!A[q.id];                       // r ও x বাধ্যতামূলক; x-এ শুধু space গ্রহণযোগ্য নয় (A-তে trim করা মান)
+  return !!A[q.id]||!!(q.u&&A[q.u]);                       // r ও x বাধ্যতামূলক; x-এ শুধু space গ্রহণযোগ্য নয় (A-তে trim করা মান)
 }
 function cardOk(i){return CARDS[i].qs.every(qOk)}
 function unlocked(i){return !UI_CONFIG.lockCards||i===0||i===PRAYER_COUNT||cardOk(i-1)}
 function sync(){
   CARDS.forEach(function(c){c.qs.forEach(function(q){
     var el=$('[data-id="'+q.id+'"]'),v=vis(q);
-    if(!v&&A[q.id]!==undefined){delete A[q.id];$$("input",el).forEach(function(x){x.checked=false});var t=$("textarea",el);if(t)t.value=""}
+    if(!v&&(A[q.id]!==undefined||(q.u&&A[q.u]!==undefined))){delete A[q.id];if(q.u)delete A[q.u];$$("input",el).forEach(function(x){x.checked=false});var t=$("textarea",el);if(t)t.value=""}
     if(!v)clearErr(el);
     el.hidden=!v;
   })});
   var done=0;
   $$(".acard").forEach(function(d){
     var i=+d.dataset.i,u=unlocked(i),ok=cardOk(i)&&u,h=$(".acard-h",d),b=$(".acard-b",d);
-    h.disabled=!u;d.classList.toggle("is-done",ok&&CARDS[i].qs.some(function(q){return vis(q)&&q.t==="r"&&A[q.id]}));
+    h.disabled=!u;d.classList.toggle("is-done",ok&&CARDS[i].qs.some(function(q){return vis(q)&&q.t==="r"&&(A[q.id]||(q.u&&A[q.u]))}));
     if(d.classList.contains("is-done"))done++;
     $(".badge",d).textContent=!u?"লক":(d.classList.contains("is-done")?"সম্পন্ন":"");
     if(!u){h.setAttribute("aria-expanded","false");b.hidden=true}
@@ -900,7 +926,10 @@ function show(n,init){
 
 /* ---- ইভেন্ট ---- */
 var form=$("#amalForm");
-form.addEventListener("input",function(e){
+if(e.target.dataset&&e.target.dataset.u){
+      var uv=e.target.value.replace(/\s+/g," ").trim();
+      if(uv){A[e.target.dataset.u]=uv;delete A[el.dataset.id];$$('input[type=radio]',el).forEach(function(x){x.checked=false})}else delete A[e.target.dataset.u];
+    }else if(e.target.type==="checkbox"){,function(e){
   var el=e.target.closest("[data-id]");
   if(el){
     if(e.target.type==="checkbox"){
@@ -909,6 +938,7 @@ form.addEventListener("input",function(e){
     }else{
       var v=e.target.type==="radio"?(e.target.checked?e.target.value:""):e.target.value.replace(/\s+/g," ").trim();
       if(v)A[el.dataset.id]=v;else delete A[el.dataset.id];
+      if(v&&e.target.type==="radio"){var cu=$("textarea[data-u]",el);if(cu){cu.value="";delete A[cu.dataset.u]}}
     }
     clearErr(el);
   }else{var f=e.target.closest(".field");if(f)clearErr(f)}
@@ -975,7 +1005,7 @@ function submit(){
   if(busy)return;busy=true;sync();rid=rid||("r"+Date.now().toString(36)+Math.random().toString(36).slice(2,10));
   $("#loader").classList.add("open");
   var body={action:"submit",requestId:rid,name:$("#f_name").value.replace(/\s+/g," ").trim(),mobile:$("#f_mobile").value,answers:{}};
-  CARDS.forEach(function(c){c.qs.forEach(function(q){if(vis(q)&&A[q.id])body.answers[q.id]=A[q.id]})});
+  CARDS.forEach(function(c){c.qs.forEach(function(q){if(vis(q)&&A[q.id])body.answers[q.id]=A[q.id];if(vis(q)&&q.u&&A[q.u])body.answers[q.u]=A[q.u]})});
   api("POST","",body).then(done,function(err){
     if(err&&err.code==="NO_URL")return fail("সার্ভারের ঠিকানা (Web App URL) এখনও সেট করা হয়নি।");
     return recover(0);       // নেটওয়ার্ক/টাইমআউট: সার্ভারে আসল অবস্থা যাচাই
