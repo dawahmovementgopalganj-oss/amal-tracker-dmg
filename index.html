@@ -840,7 +840,7 @@ function bnDate(ymd){var p=ymd.split("-");return (p[2]+" "+MON[+p[1]-1]+" "+p[0]
 function qHtml(q){
   var id=q.id;
   if(q.t==="r") return '<fieldset class="field" data-id="'+id+'" hidden><legend class="label">'+esc(q.l)+'<span class="req">*</span></legend><div class="choice-grid">'+
-    q.o.map(function(o){return '<label class="choice"><input type="radio" name="e'+id+'" value="'+esc(o)+'"><span class="choice-body"><span class="dot"></span><span><strong>'+esc(o)+'</strong></span></span></label>'}).join("")+(q.u?,<textarea class="input u-input" rows="1" maxlength="200" data-u='" placeholder="নিজে লিখুন" aria-label="নিজে লিখুন"></textarea>':'')+
+    q.o.map(function(o){return '<label class="choice"><input type="radio" name="e'+id+'" value="'+esc(o)+'"><span class="choice-body"><span class="dot"></span><span><strong>'+esc(o)+'</strong></span></span></label>'}).join("")+(q.u?'<textarea class="input u-input" rows="1" maxlength="200" data-u="'+q.u+'" placeholder="নিজে লিখুন" aria-label="নিজে লিখুন"></textarea>':'')+
     '</div><p class="field-error"></p></fieldset>';
   if(q.t==="c") return '<fieldset class="field" data-id="'+id+'" hidden><legend class="label">'+esc(q.l)+'<span class="req">*</span></legend><p class="field-hint" style="margin:0 0 8px;color:var(--muted);font-size:.9rem">এক বা একাধিক ওয়াক্ত বেছে নিন।</p><div class="choice-grid">'+
     q.o.map(function(o){return '<label class="choice"><input type="checkbox" name="e'+id+'" value="'+esc(o)+'"><span class="choice-body"><span class="dot sq"></span><span><strong>'+esc(o)+'</strong></span></span></label>'}).join("")+
@@ -926,13 +926,13 @@ function show(n,init){
 
 /* ---- ইভেন্ট ---- */
 var form=$("#amalForm");
-if(e.target.dataset&&e.target.dataset.u){
-      var uv=e.target.value.replace(/\s+/g," ").trim();
-      if(uv){A[e.target.dataset.u]=uv;delete A[el.dataset.id];$$('input[type=radio]',el).forEach(function(x){x.checked=false})}else delete A[e.target.dataset.u];
-    }else if(e.target.type==="checkbox"){,function(e){
+form.addEventListener("input",function(e){
   var el=e.target.closest("[data-id]");
   if(el){
-    if(e.target.type==="checkbox"){
+    if(e.target.dataset&&e.target.dataset.u){
+      var uv=e.target.value.replace(/\s+/g," ").trim();
+      if(uv){A[e.target.dataset.u]=uv;delete A[el.dataset.id];$$('input[type=radio]',el).forEach(function(x){x.checked=false})}else delete A[e.target.dataset.u];
+    }else if(e.target.type==="checkbox"){
       var cs=$$('input[type=checkbox]:checked',el).map(function(x){return x.value});
       if(cs.length)A[el.dataset.id]=cs;else delete A[el.dataset.id];
     }else{
